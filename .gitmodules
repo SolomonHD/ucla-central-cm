@@ -1,0 +1,48 @@
+[submodule "uclalib/roles/uclalib_role_epel"]
+	path = uclalib/roles/uclalib_role_epel
+	url = https://github.com/UCLALibrary/uclalib_role_epel.git
+[submodule "uclalib/roles/uclalib_role_rhel7repos"]
+	path = uclalib/roles/uclalib_role_rhel7repos
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_rhel7repos.git
+[submodule "uclalib/roles/uclalib_role_samvera_basepackages"]
+	path = uclalib/roles/uclalib_role_samvera_basepackages
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_samvera_basepackages.git
+[submodule "uclalib/roles/uclalib_role_java"]
+	path = uclalib/roles/uclalib_role_java
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_java.git
+[submodule "uclalib/roles/uclalib_role_clamav"]
+	path = uclalib/roles/uclalib_role_clamav
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_clamav.git
+[submodule "uclalib/roles/uclalib_role_pip"]
+	path = uclalib/roles/uclalib_role_pip
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_pip.git
+[submodule "uclalib/roles/uclalib_role_imagemagick"]
+	path = uclalib/roles/uclalib_role_imagemagick
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_imagemagick.git
+[submodule "uclalib/roles/uclalib_role_libreoffice"]
+	path = uclalib/roles/uclalib_role_libreoffice
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_libreoffice.git
+[submodule "uclalib/roles/uclalib_role_ffmpeg"]
+	path = uclalib/roles/uclalib_role_ffmpeg
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_ffmpeg.git
+[submodule "uclalib/roles/uclalib_role_fits"]
+	path = uclalib/roles/uclalib_role_fits
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_fits.git
+[submodule "uclalib/roles/uclalib_role_ruby"]
+	path = uclalib/roles/uclalib_role_ruby
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_ruby.git
+[submodule "uclalib/roles/uclalib_role_apache"]
+	path = uclalib/roles/uclalib_role_apache
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_apache.git
+[submodule "uclalib/roles/uclalib_role_passenger"]
+	path = uclalib/roles/uclalib_role_passenger
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_passenger.git
+[submodule "uclalib/roles/uclalib_role_nodejs"]
+	path = uclalib/roles/uclalib_role_nodejs
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_nodejs.git
+[submodule "uclalib/roles/uclalib_role_yarn"]
+	path = uclalib/roles/uclalib_role_yarn
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_yarn.git
+[submodule "uclalib/roles/uclalib_role_redis"]
+	path = uclalib/roles/uclalib_role_redis
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_redis.git
