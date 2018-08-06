@@ -46,3 +46,6 @@
 [submodule "uclalib/roles/uclalib_role_redis"]
 	path = uclalib/roles/uclalib_role_redis
 	url = https://github.com/UCLALibrary/ansible_uclalib_role_redis.git
+[submodule "uclalib/roles/uclalib_role_uclalibrepo"]
+	path = uclalib/roles/uclalib_role_uclalibrepo
+	url = https://github.com/UCLALibrary/ansible_uclalib_role_uclalibrepo.git

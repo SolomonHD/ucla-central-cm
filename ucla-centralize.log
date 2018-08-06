@@ -1,0 +1,66 @@
+2018-08-05 13:15:58,752 p=121091 u=shilli2 |  Using /home/shilli2/DCE_Work/ucla-central-cm/ansible.cfg as config file
+2018-08-05 13:15:58,821 p=121091 u=shilli2 |  ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to have been in '/home/shilli2/DCE_Work/ucla-central-cm/ruby_server_build.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- host: '{{ host }}'
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2018-08-05 13:16:22,557 p=121138 u=shilli2 |  Using /home/shilli2/DCE_Work/ucla-central-cm/ansible.cfg as config file
+2018-08-05 13:16:24,020 p=121138 u=shilli2 |  ERROR! The field 'hosts' has an invalid value, which includes an undefined variable. The error was: 'host' is undefined
+
+The error appears to have been in '/home/shilli2/DCE_Work/ucla-central-cm/ruby_server_build.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: '{{ host }}'
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2018-08-05 13:16:47,687 p=121167 u=shilli2 |  Using /home/shilli2/DCE_Work/ucla-central-cm/ansible.cfg as config file
+2018-08-05 13:16:47,699 p=121167 u=shilli2 |   [WARNING]: Unable to parse /home/shilli2/DCE_Work/ucla-central-cm/hosts as an inventory source
+
+2018-08-05 13:16:47,699 p=121167 u=shilli2 |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-08-05 13:16:47,702 p=121167 u=shilli2 |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-08-05 13:16:48,007 p=121167 u=shilli2 |   [WARNING]: Could not match supplied host pattern, ignoring: 54.91.116.97
+
+2018-08-05 13:16:48,007 p=121167 u=shilli2 |  PLAY [54.91.116.97] ***************************************************************************************************************************************************************************************************************************************************************************
+2018-08-05 13:16:48,007 p=121167 u=shilli2 |  skipping: no hosts matched
+2018-08-05 13:16:48,007 p=121167 u=shilli2 |  PLAY RECAP ************************************************************************************************************************************************************************************************************************************************************************************
+2018-08-05 13:17:09,015 p=121192 u=shilli2 |  Using /home/shilli2/DCE_Work/ucla-central-cm/ansible.cfg as config file
+2018-08-05 13:17:09,338 p=121192 u=shilli2 |  PLAY [54.91.116.97] ***************************************************************************************************************************************************************************************************************************************************************************
+2018-08-05 13:17:09,358 p=121192 u=shilli2 |  TASK [Gathering Facts] ************************************************************************************************************************************************************************************************************************************************************************
+2018-08-05 13:17:17,786 p=121192 u=shilli2 |  ok: [54.91.116.97]
+2018-08-05 13:17:17,822 p=121192 u=shilli2 |  TASK [uclalib_role_rhel7repos : Ensure all necessary RHEL7 repositories are enabled for this system] ******************************************************************************************************************************************************************************************
+2018-08-05 13:17:19,914 p=121192 u=shilli2 |  fatal: [54.91.116.97]: FAILED! => {"changed": true, "cmd": ["subscription-manager", "repos", "--enable=rhel-7-server-rpms", "--enable=rhel-7-server-optional-rpms", "--enable=rhel-7-server-supplementary-rpms", "--enable=rhel-7-server-extras-rpms"], "delta": "0:00:00.807433", "end": "2018-08-05 20:17:19.763496", "msg": "non-zero return code", "rc": 1, "start": "2018-08-05 20:17:18.956063", "stderr": "", "stderr_lines": [], "stdout": "Error: 'rhel-7-server-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.\nError: 'rhel-7-server-optional-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.\nError: 'rhel-7-server-supplementary-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.\nError: 'rhel-7-server-extras-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.\n\nWARNING\n\nThe yum plugins: /etc/yum/pluginconf.d/subscription-manager.conf, /etc/yum/pluginconf.d/product-id.conf were automatically enabled for the benefit of Red Hat Subscription Management. If not desired, use \"subscription-manager config --rhsm.auto_enable_yum_plugins=0\" to block this behavior.", "stdout_lines": ["Error: 'rhel-7-server-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.", "Error: 'rhel-7-server-optional-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.", "Error: 'rhel-7-server-supplementary-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.", "Error: 'rhel-7-server-extras-rpms' does not match a valid repository ID. Use \"subscription-manager repos --list\" to see valid repositories.", "", "WARNING", "", "The yum plugins: /etc/yum/pluginconf.d/subscription-manager.conf, /etc/yum/pluginconf.d/product-id.conf were automatically enabled for the benefit of Red Hat Subscription Management. If not desired, use \"subscription-manager config --rhsm.auto_enable_yum_plugins=0\" to block this behavior."]}
+2018-08-05 13:17:19,916 p=121192 u=shilli2 |  PLAY RECAP ************************************************************************************************************************************************************************************************************************************************************************************
+2018-08-05 13:17:19,916 p=121192 u=shilli2 |  54.91.116.97               : ok=1    changed=0    unreachable=0    failed=1   

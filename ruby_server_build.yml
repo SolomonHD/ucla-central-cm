@@ -1,0 +1,9 @@
+---
+- hosts: '{{ host }}'
+  become: yes
+  user: ec2-user  
+  roles: 
+    - {role: uclalib_role_rhel7repos }
+    - {role: uclalib_role_epel }
+    - {role: uclalib_role_uclalibrepo }  
+
